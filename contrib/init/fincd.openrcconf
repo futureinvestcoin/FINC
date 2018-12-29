@@ -1,0 +1,26 @@
+# /etc/conf.d/fincd: config file for /etc/init.d/fincd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/finc/finc.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/fincd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/fincd.pid"
+
+# Where to write fincd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/fincd"
+
+# User and group to own fincd process
+#BITCOIND_USER="finc"
+#BITCOIND_GROUP="finc"
+
+# Path to fincd executable
+#BITCOIND_BIN="/usr/bin/fincd"
+
+# Nice value to run fincd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

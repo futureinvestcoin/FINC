@@ -1,0 +1,26 @@
+[Unit]
+Description=finc's distributed currency daemon
+After=network.target
+
+[Service]
+User=finc
+Group=finc
+
+Type=forking
+PIDFile=/var/lib/fincd/fincd.pid
+
+ExecStart=/usr/bin/fincd -daemon -pid=/var/lib/fincd/fincd.pid \
+          -conf=/etc/finc/finc.conf -datadir=/var/lib/fincd
+
+ExecStop=-/usr/bin/finc-cli -conf=/etc/finc/finc.conf \
+         -datadir=/var/lib/fincd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

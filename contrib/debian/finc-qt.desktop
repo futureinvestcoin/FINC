@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=finc
+Comment=finc P2P Cryptocurrency
+Comment[fr]=finc, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=finc, eşten eşe kriptografik sanal para birimi
+Exec=finc-qt %u
+Terminal=false
+Type=Application
+Icon=finc128
+MimeType=x-scheme-handler/finc;
+Categories=Office;Finance;
