@@ -5,7 +5,7 @@ FINC POS/MN coin, go to https://futureinvest.one for more details
 
 Twitter:  https://twitter.com/finccash
 Telegram: https://t.me/finccash
-Discord:  https://discord.gg/pcve7Wm
+Discord:  https://discord.gg/AgFJFfz
 
 
 License
