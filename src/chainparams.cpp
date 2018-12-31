@@ -53,10 +53,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //    timestamp before)
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
-    boost::assign::map_list_of(0, uint256("0x00000ec7140ffa24f60289a3667fc576bbf49fed5d3f3ebb0471a5cbcb52cee6"));
+    boost::assign::map_list_of(0, uint256("0x8c63fec78e0ee587d06d34515c648a6ae3a82060ec46f36e263e5ce9f3f55d2f"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1545974226,  // * UNIX timestamp of last checkpoint block
+    1546224347,  // * UNIX timestamp of last checkpoint block
     0,           // * total number of transactions between genesis and last checkpoint
                  //   (the tx=... number in the SetBestChain debug.log lines)
     5000         // * estimated number of transactions per day after checkpoint
@@ -123,7 +123,7 @@ public:
         nModifierUpdateBlock = 9999999;
         nZerocoinStartHeight = 601;
         nAccumulatorStartHeight = 1;
-        nZerocoinStartTime = 1546984644; //but afer 601 blocks!
+        nZerocoinStartTime = 1546260428; //but afer 601 blocks!
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = ~1; //First block that bad serials emerged
@@ -150,22 +150,27 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1545974226;
+        genesis.nTime = 1546224347;
         genesis.nBits = 0x1e0fffff;
-        genesis.nNonce = 1162950;
+        genesis.nNonce = 3561352;
 
 
         hashGenesisBlock = genesis.GetHash();
 
-
-        assert(hashGenesisBlock == uint256("0x00000ec7140ffa24f60289a3667fc576bbf49fed5d3f3ebb0471a5cbcb52cee6"));
+        assert(hashGenesisBlock == uint256("0x000003ecf79154c83b28637a98bbff80e5ef6f80e82c1bd99080e0d85d240d53"));
         assert(genesis.hashMerkleRoot == uint256("0x8c63fec78e0ee587d06d34515c648a6ae3a82060ec46f36e263e5ce9f3f55d2f"));
 
 
 
-
-
-        vSeeds.push_back(CDNSSeedData("", "")); //FutureInvest's dns seeder
+        vSeeds.push_back(CDNSSeedData("46.229.214.66", "46.229.214.66")); //FutureInvest's dns seeder
+        vSeeds.push_back(CDNSSeedData("176.53.160.211", "176.53.160.211"));
+        vSeeds.push_back(CDNSSeedData("185.178.47.216", "185.178.47.216"));
+        vSeeds.push_back(CDNSSeedData("185.178.46.2", "185.178.46.2"));
+        vSeeds.push_back(CDNSSeedData("185.178.47.251", "185.178.47.251"));
+        vSeeds.push_back(CDNSSeedData("185.178.47.226", "185.178.47.226"));
+        vSeeds.push_back(CDNSSeedData("185.178.47.225", "185.178.47.225"));
+        vSeeds.push_back(CDNSSeedData("185.178.46.170", "185.178.46.170"));
+        vSeeds.push_back(CDNSSeedData("185.178.46.229", "185.178.46.229"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 35);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 33);
